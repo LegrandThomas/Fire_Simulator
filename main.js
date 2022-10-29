@@ -10,11 +10,16 @@ let compteurARBREsprox=0;
 let tableauIDbutton=[];
 const delay = ms => new Promise(res => setTimeout(res, ms));
 let choix="";
-let tabForet=[];
+let       tabForet= [
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0]
+];
 let rnd=0;
 
 let NumMap;
-ChoixMap();
+// ChoixMap();
 function ChoixMap() {
     NumMap=prompt("enter le format de map désiré: enter 4 pour 4par4, 8 pour 8par8, 16 pour 16par16  ");
     console.log(NumMap);
