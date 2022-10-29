@@ -10,24 +10,63 @@ let compteurARBREsprox=0;
 let tableauIDbutton=[];
 const delay = ms => new Promise(res => setTimeout(res, ms));
 let choix="";
-
+let tabForet=[];
 let rnd=0;
-let tabForet= [
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0]
-];
+
+let NumMap;
+ChoixMap();
+function ChoixMap() {
+    NumMap=prompt("enter le format de map désiré: enter 4 pour 4par4, 8 pour 8par8, 16 pour 16par16  ");
+    console.log(NumMap);
+    if(NumMap!=='4'){
+        if (NumMap!=='8') {
+            if (NumMap!=='16') {
+                alert("vous n'avez pas saisi '4'");
+                ChoixMap() 
+            }
+        }
+       
+    }
+}
+
+switch (NumMap) {
+    case "4":
+        tabForet= [
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ];
+        break;
+
+        case "8":
+            tabForet= [
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0]
+            ];
+            break;
+
+            case "16":
+            tabForet= [
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            ];
+            break;
+
+
+    default:
+        break;
+}
+
 let NewForet=tabForet;
 
 function log(){
     nbreARbreVoulu=0;
-  tabForet=tabForet= [
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0]
-];
+    tabForet=tabForet;
     f=document.getElementById("SelectNbreArbre").value;
     divReceveur.innerHTML="nbre d(arbres sélectionné(s): "+f ;
     switch (f) {
