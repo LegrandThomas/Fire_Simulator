@@ -119,9 +119,7 @@ function getRandomInt(max) {
   }
 
 function afficheForetActualised(){
-    // console.log(NewForet);
-    // tabForet=NewForet;
-   
+
 let txt="";
 console.log(nbreARbreVoulu);
 for (let i = 0; i < tabForet.length; i++) {
@@ -165,7 +163,6 @@ txt+="<div>";
     txt+="</div>";
    }
    DivResult.innerHTML=txt;
-//    console.log(NewForet);
    load()
 }
 
@@ -255,7 +252,7 @@ switch (id) {
                 break;
                 
 }
-// console.log(buttons[id].textContent);
+
 if(buttons[id].textContent==" 🍥 "){
 
     alert("vous n'avez pas sélectionné un arbre !!! recommencé!!");
@@ -287,7 +284,7 @@ function myTimer() {
 
 function incendiePropagation(params) {
     let tab= params;
-    console.log(params);
+
 for (let i = 0; i < tab.length; i++) {
     for (let j = 0; j < tab[i].length; j++) {
 
@@ -504,35 +501,27 @@ async function fire(tablo){
                     c=getRandomInt(4);
                     if(c<1){
                     console.log("Tentative échouée");
-                    
-                    // setInterval(fire(tab), 1000);
-                    await delay(5000);
+                                        await delay(5000);
                     fire(tab)
                     }else{
                         console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                         tab[i-1][j]=3;
                         tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
-                        // afficheForetActualised()
-                        // incendiePropagation(tab);
                     }
-
-                        
-                } if (tab[i+1][j]==1) {
+                     }
+                      if (tab[i+1][j]==1) {
                     console.log("Tentative de propagation case du dessous, avec 80% de chance");
                     c=getRandomInt(4);
                     if(c<1){
                     console.log("Tentative échouée");
-                    // setInterval(fire(tab), 1000);
                     await delay(5000);
                     fire(tab)
                     }else{
                         console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                         tab[i+1][j]=3;
                         tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                     }
@@ -542,14 +531,12 @@ async function fire(tablo){
                     c=getRandomInt(4);
                     if(c<1){
                     console.log("Tentative échouée");
-                    // setInterval(fire(tab), 1000);
                     await delay(5000);
                     fire(tab)
                     }else{
                         console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                         tab[i][j-1]=3;
                         tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                     }
@@ -558,14 +545,12 @@ async function fire(tablo){
                     c=getRandomInt(4);
                     if(c<1){
                     console.log("Tentative échouée");
-                    // setInterval(fire(tab), 1000);
                     await delay(5000);
                     fire(tab)
                     }else{
                         console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                         tab[i][j+1]=3;
                         tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                     }
@@ -578,14 +563,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -596,14 +579,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -616,14 +597,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -633,14 +612,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -653,14 +630,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -670,14 +645,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1].innerHTML=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -688,14 +661,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -705,18 +676,15 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
-                
             } 
     
         }else if((i==0)&&((j==1)||(j==2))){
@@ -725,14 +693,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -742,14 +708,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
                 fire(tab)
                 }else{
                     console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -758,14 +722,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -778,14 +740,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -795,14 +755,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -811,14 +769,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -830,14 +786,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -847,14 +801,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -864,14 +816,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -883,14 +833,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
@@ -900,14 +848,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
-                        // console.log(tabForet);
                         await delay(5000);
                         maj(tab);
                 }
@@ -916,14 +862,12 @@ async function fire(tablo){
                 c=getRandomInt(4);
                 if(c<1){
                 console.log("Tentative échouée");
-                // setInterval(fire(tab), 1000);
                 await delay(5000);
-                fire(tab)
+                fire(tab);
                 }else{
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
-                    // console.log(tabForet);
                     await delay(5000);
                     maj(tab);
                 }
