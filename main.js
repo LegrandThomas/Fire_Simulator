@@ -76,9 +76,6 @@ switch (NumMap) {
 let NewForet=tabForet;
 
 function log(){
-console.log(tabForet);
-console.log(NewForet);
-
     nbreARbreVoulu=0;
    NewForet=tabForet;
    switch (NumMap) {
@@ -213,8 +210,6 @@ function afficheForetActualised(){
 
 let txt="";
 console.log(nbreARbreVoulu);
-console.log(tabForet);
-console.log(NewForet);
 
 for (let i = 0; i < tabForet.length; i++) {
 txt+="<div>";
