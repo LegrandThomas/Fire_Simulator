@@ -21,12 +21,12 @@ let rnd=0;
 let NumMap;
 ChoixMap();
 function ChoixMap() {
-    NumMap=prompt("enter le format de map désiré:\n enter 4 pour 16 parcelles (✔️DISPONIBLE)\n enter 8 pour 8par8 32 parcelles (🚧IN PROGRESS)\n enter 16 pour 64 parcelles (⛔️EN PANNE)\n  ");
+    NumMap=prompt("enter le format de map désiré:\n enter 4 pour 16 parcelles (✔️DISPONIBLE)\n enter 6 pour 36 parcelles (🚧IN PROGRESS)\n enter 8 pour 64 parcelles (⛔️EN PANNE)\n  ");
     console.log(NumMap);
     if(NumMap!=='4'){
-        if (NumMap!=='8') {
-            if (NumMap!=='16') {
-                alert("vous n'avez pas saisi '4'");
+        if (NumMap!=='6') {
+            if (NumMap!=='8') {
+                alert("vous n'avez pas saisi '4','6' ou '8'");
                 ChoixMap() 
             }
         }
@@ -44,21 +44,27 @@ switch (NumMap) {
         ];
         break;
 
-        case "8":
+        case "6":
             tabForet= [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ];
+            break;
+
+            case "8":
+            tabForet= [
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0]
-            ];
-            break;
-
-            case "16":
-            tabForet= [
-                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             ];
             break;
 
@@ -70,13 +76,49 @@ switch (NumMap) {
 let NewForet=tabForet;
 
 function log(){
+console.log(tabForet);
+console.log(NewForet);
+
     nbreARbreVoulu=0;
-    tabForet=[
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0]
-    ];
+   NewForet=tabForet;
+   switch (NumMap) {
+    case "4":
+        tabForet= [
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ];
+        break;
+
+        case "6":
+            tabForet= [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ];
+            break;
+
+            case "8":
+            tabForet= [
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0]
+            ];
+            break;
+
+
+    default:
+        break;
+}
     f=document.getElementById("SelectNbreArbre").value;
     divReceveur.innerHTML="nbre d(arbres sélectionné(s): "+f ;
     switch (f) {
@@ -172,6 +214,8 @@ function afficheForetActualised(){
 let txt="";
 console.log(nbreARbreVoulu);
 console.log(tabForet);
+console.log(NewForet);
+
 for (let i = 0; i < tabForet.length; i++) {
 txt+="<div>";
    for (let j = 0; j < tabForet[i].length; j++) {
@@ -213,6 +257,7 @@ txt+="<div>";
     txt+="</div>";
    }
    DivResult.innerHTML=txt;
+   tabForet=NewForet;
    load()
 }
 
