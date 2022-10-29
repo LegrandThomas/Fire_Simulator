@@ -329,7 +329,7 @@ buttons[id].innerHTML=" 🔥 ";
 function myTimer() {
   let d = new Date();
   d=d.toLocaleTimeString()
-  divtimer.innerHTML= ""+d+"";
+  divtimer.innerHTML= "🕔 "+d+"";
 }
 
 function incendiePropagation(params) {
