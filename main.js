@@ -10,7 +10,7 @@ let compteurARBREsprox=0;
 let tableauIDbutton=[];
 const delay = ms => new Promise(res => setTimeout(res, ms));
 let choix="";
-let       tabForet= [
+let tabForet= [
     [0,0,0,0],
     [0,0,0,0],
     [0,0,0,0],
@@ -19,9 +19,9 @@ let       tabForet= [
 let rnd=0;
 
 let NumMap;
-// ChoixMap();
+ChoixMap();
 function ChoixMap() {
-    NumMap=prompt("enter le format de map désiré: enter 4 pour 4par4, 8 pour 8par8, 16 pour 16par16  ");
+    NumMap=prompt("enter le format de map désiré:\n enter 4 pour 16 parcelles (✔️DISPONIBLE)\n enter 8 pour 8par8 32 parcelles (🚧IN PROGRESS)\n enter 16 pour 64 parcelles (⛔️EN PANNE)\n  ");
     console.log(NumMap);
     if(NumMap!=='4'){
         if (NumMap!=='8') {
@@ -71,7 +71,12 @@ let NewForet=tabForet;
 
 function log(){
     nbreARbreVoulu=0;
-    tabForet=tabForet;
+    tabForet=[
+        [0,0,0,0],
+        [0,0,0,0],
+        [0,0,0,0],
+        [0,0,0,0]
+    ];
     f=document.getElementById("SelectNbreArbre").value;
     divReceveur.innerHTML="nbre d(arbres sélectionné(s): "+f ;
     switch (f) {
@@ -166,6 +171,7 @@ function afficheForetActualised(){
 
 let txt="";
 console.log(nbreARbreVoulu);
+console.log(tabForet);
 for (let i = 0; i < tabForet.length; i++) {
 txt+="<div>";
    for (let j = 0; j < tabForet[i].length; j++) {
@@ -518,6 +524,8 @@ for (let i = 0; i < tab.length; i++) {
         console.log("pas d'arbes à proximité de l'incendie, le feu s'éteint donc! Partie terminée");
         compteurARBREsprox=0;
         break;
+}else{
+    end();
 }
     }
     
@@ -916,12 +924,20 @@ async function fire(tablo){
                     maj(tab);
                 }
             }
+        }else{
+            console.log("pas d'arbes à proximité de l'incendie, le feu s'éteint donc! Partie terminée");
+            end();
         }
         }
         
     }
         
     }}
+
+function end() {
+    alert("incendie terminé!");
+    
+}
 
 function maj(param){
     buttons = document.getElementsByClassName('test');
