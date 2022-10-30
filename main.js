@@ -32,7 +32,7 @@ function ChoixMap() {
         }
        
     }
-    if((NumMap=='4')||(NumMap=='6')||(NumMap=='8')){
+    if((NumMap=='6')||(NumMap=='8')){
         alert("vous avez était redirigé sur le seul mode actuellement disponible : 4par4\nMerci de votre compréhension 😕")
         tabForet= [
             [0,0,0,0],
@@ -187,6 +187,7 @@ function log(){
             break;
     }
 console.log("nbre arbres selectionné : "+nbreARbreVoulu);
+k=nbreARbreVoulu;
 afficheForetActualised();
 }
 
@@ -221,26 +222,27 @@ function getRandomInt(max) {
   }
 
 function afficheForetActualised(){
-
+nbreARbreVoulu=k;
 let txt="";
 console.log(nbreARbreVoulu);
+let compteur=0;
 
 for (let i = 0; i < tabForet.length; i++) {
 txt+="<div>";
    for (let j = 0; j < tabForet[i].length; j++) {
-
+compteur+=1;
     if (tabForet[i][j]===0) {
         
        if (nbreARbreVoulu>0) {
             console.log("nombre d'🌲 à planter : "+nbreARbreVoulu);
             rnd=getRandomInt(2);
-    if(i+nbreARbreVoulu>=tabForet.length){
+    if(( compteur+ nbreARbreVoulu)>=16){
     console.log("un 🌲 planté ");
     couleur=" 🌲 ";
     nbreARbreVoulu=nbreARbreVoulu-1;
     NewForet[i][j]=1;
     }else{
-
+console.log(rnd);
         if (rnd==0) {
             console.log("un 🌲 planté ");
             couleur=" 🌲 ";
