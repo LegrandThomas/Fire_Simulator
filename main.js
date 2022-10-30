@@ -639,7 +639,7 @@ async function fire(tablo){
                         tabForet=tab;
 
                         compteurARBREbrule+=1;
-                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                        divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                         compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -659,7 +659,7 @@ async function fire(tablo){
                         tabForet=tab;
 
                         compteurARBREbrule+=1;
-                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                        divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                         compteurARBREsprox+=-1; 
 
                         await delay(5000);
@@ -679,7 +679,7 @@ async function fire(tablo){
                         tabForet=tab;
 
                         compteurARBREbrule+=1;
-                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                        divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                         compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -698,7 +698,7 @@ async function fire(tablo){
                         tabForet=tab;
 
                         compteurARBREbrule+=1;
-                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                        divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                         compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -721,7 +721,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -742,7 +742,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -765,7 +765,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -785,7 +785,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -808,7 +808,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -828,7 +828,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -849,7 +849,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -869,7 +869,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -891,7 +891,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -911,7 +911,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -930,7 +930,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -953,7 +953,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -973,7 +973,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -992,7 +992,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -1014,7 +1014,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -1034,7 +1034,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -1054,7 +1054,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -1076,7 +1076,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
@@ -1096,7 +1096,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                         await delay(5000);
@@ -1115,7 +1115,7 @@ async function fire(tablo){
                     tabForet=tab;
 
                     compteurARBREbrule+=1;
-                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
+                    divReceveurABREbrule.innerHTML="Estimation nbre arbre(s) brûlé(s) au prochain tour de clock: "+compteurARBREbrule;
                     compteurARBREsprox+=-1;
 
                     await delay(5000);
