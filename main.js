@@ -1,5 +1,6 @@
 const DivResult=document.querySelector("#resultat");
 let divReceveur=document.querySelector("#receveur");
+let divReceveurABREbrule=document.querySelector("#receveurARBREbrule");
 let divtimer=document.querySelector("#timer");
 const btn=document.getElementById("generate");
 let f=document.getElementById("SelectNbreArbre").value;
@@ -9,6 +10,7 @@ let couleur=" 🍥 ";
 let compteurARBREsprox=0;
 let tableauIDbutton=[];
 const delay = ms => new Promise(res => setTimeout(res, ms));
+let compteurARBREbrule=0;
 let choix="";
 let tabForet= [
     [0,0,0,0],
@@ -22,7 +24,7 @@ let NumMap;
 ChoixMap();
 function ChoixMap() {
     NumMap=prompt("enter le format de map désiré:\n enter 4 pour 16 parcelles (✔️DISPONIBLE)\n enter 6 pour 36 parcelles (🚧IN PROGRESS)\n enter 8 pour 64 parcelles (⛔️EN PANNE)\n  ");
-    console.log(NumMap);
+    // console.log(NumMap);
     if(NumMap!=='4'){
         if (NumMap!=='6') {
             if (NumMap!=='8') {
@@ -132,6 +134,7 @@ function log(){
 // }
     f=document.getElementById("SelectNbreArbre").value;
     divReceveur.innerHTML="nbre d(arbres sélectionné(s): "+f ;
+    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
     switch (f) {
         case "un":
             nbreARbreVoulu=1;
@@ -366,9 +369,9 @@ if(buttons[id].textContent==" 🍥 "){
     
 }else{
 
-
 buttons[id].innerHTML=" 🔥 ";
-
+compteurARBREbrule=+1;
+divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
 
     alert("Choix pris en compte,Vous avez cliquer sur la "+choix+" pour mettre le feu\n 🌟🌟ATTENTION🌟🌟 vous ne pouvez plus cliquer ailleurs !");
     buttons = document.getElementsByClassName('test');
@@ -615,6 +618,11 @@ async function fire(tablo){
                         console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                         tab[i-1][j]=3;
                         tabForet=tab;
+
+                        compteurARBREbrule+=1;
+                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                        compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                     }
@@ -630,6 +638,11 @@ async function fire(tablo){
                         console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                         tab[i+1][j]=3;
                         tabForet=tab;
+
+                        compteurARBREbrule+=1;
+                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                        compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                     }
@@ -645,6 +658,11 @@ async function fire(tablo){
                         console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                         tab[i][j-1]=3;
                         tabForet=tab;
+
+                        compteurARBREbrule+=1;
+                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                        compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                     }
@@ -659,6 +677,11 @@ async function fire(tablo){
                         console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                         tab[i][j+1]=3;
                         tabForet=tab;
+
+                        compteurARBREbrule+=1;
+                        divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                        compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                     }
@@ -677,6 +700,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -693,6 +721,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -711,6 +744,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -726,6 +764,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -744,6 +787,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -759,6 +807,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1].innerHTML=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -775,6 +828,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -790,6 +848,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -807,6 +870,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -822,6 +890,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -836,6 +909,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -854,6 +932,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -869,6 +952,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -883,6 +971,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -900,6 +993,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -915,6 +1013,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de droite s'enflamme");
                     tab[i][j+1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -930,6 +1033,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -947,6 +1055,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre de gauche s'enflamme");
                     tab[i][j-1]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
@@ -962,6 +1075,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessus s'enflamme");
                     tab[i-1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                         await delay(5000);
                         maj(tab);
                 }
@@ -976,6 +1094,11 @@ async function fire(tablo){
                     console.log("Tentative réussie ! l'arbre du dessous s'enflamme");
                     tab[i+1][j]=3;
                     tabForet=tab;
+
+                    compteurARBREbrule+=1;
+                    divReceveurABREbrule.innerHTML="nbre arbre(s) brûlé(s): "+compteurARBREbrule;
+                    compteurARBREsprox+=-1;
+
                     await delay(5000);
                     maj(tab);
                 }
